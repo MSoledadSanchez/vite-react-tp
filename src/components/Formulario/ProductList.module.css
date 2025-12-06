@@ -1,0 +1,112 @@
+/* Contenedor principal de la lista (simula una tabla/lista vertical) */
+.listContainer {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Estilo para cada fila/ítem de producto */
+.productItem {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre contenido y botones */
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.productItem:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para la imagen pequeña en la lista */
+.productImageSmall {
+  width: 60px;   /* Tamaño fijo para la miniatura */
+  height: 60px;  /* Tamaño fijo para la miniatura */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 4px; /* Esquinas ligeramente redondeadas */
+  margin-right: 15px; /* Espacio entre la imagen y el texto */
+  /* Asegura que la imagen no se achique en pantallas pequeñas */
+  flex-shrink: 0; 
+}
+
+/* Contenedor para la información principal del producto */
+.productDetails {
+  flex-grow: 1; /* Ocupa el espacio restante */
+  display: flex;
+  flex-direction: column;
+}
+
+.productTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.productInfo {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Contenedor para los botones de acción */
+.actionButtons {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+  /* Asegura que los botones no se achiquen */
+  flex-shrink: 0; 
+}
+
+/* Estilo base para todos los botones de acción */
+.actionButton {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+/* Estilo específico para el botón de Actualizar (Update) */
+.updateButton {
+  background-color: #007bff; /* Azul */
+  color: white;
+}
+
+.updateButton:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo específico para el botón de Eliminar (Delete) */
+.deleteButton {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #a71d2a;
+}
+
+/* Estilo para dispositivos móviles (opcional) */
+@media (max-width: 600px) {
+    .productItem {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        align-items: flex-start;
+    }
+    .actionButtons {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: stretch;
+    }
+    .actionButton {
+        flex-grow: 1; /* Los botones ocupan todo el ancho disponible */
+    }
+
+    /* En móvil, la imagen puede seguir siendo pequeña o maximizarse */
+    .productImageSmall {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}

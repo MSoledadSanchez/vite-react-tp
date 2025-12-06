@@ -1,0 +1,12 @@
+header { 
+    
+    background-color: aquamarine;
+    padding: "10px";
+    text-align: center;
+    color: "white" 
+}
+
+.iconoDeCarrito {
+  position: relative;
+  cursor: pointer;
+}
