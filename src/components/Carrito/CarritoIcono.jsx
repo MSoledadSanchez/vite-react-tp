@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../../context/CarritoContext';
 import  BagIcon  from '../../assets/BagIcon.jsx'; 
+import styles from './Carrito.module.css';
 
 const CarritoIcon = () => {
     
@@ -8,10 +9,10 @@ const CarritoIcon = () => {
     const Items = totalItems();
 
     return (
-        <div className="cart-icon-container">
+        <div className={styles.iContenedor}>
             <BagIcon />
                 {Items > 0 && (
-                    <span className="cart-count">
+                    <span className={styles.iContador}>
                         {Items}
                     </span>
                 )}

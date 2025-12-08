@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;  /* Organizar el contenido en columna */
   align-items: center;     /* Centrar el contenido horizontalmente */
+  gap: 10px;
 }
 
 

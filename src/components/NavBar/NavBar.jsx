@@ -52,13 +52,13 @@ const NavBar = () => {
                         </button>
                     </Link>
                 )}
+          
+                {/* Imagen del carrito */}
+                <Link to="/carrito">
+                        <CarritoIcon />
+                </Link>
+                
             </div>
-
-            {/* Imagen del carrito */}
-            <Link to="/carrito">
-                    <CarritoIcon />
-            </Link>
-           
         </nav>
     )
 }
