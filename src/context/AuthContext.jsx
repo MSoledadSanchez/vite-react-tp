@@ -24,7 +24,7 @@ const USUARIOS_FAKE = [
 const AuthContext = createContext();
 
 
-export const AuthProvider = ({ children }) => { 
+export const AuthProvider = ({ children  }) => { 
 
     const [usuario, setUsuario ] = useState(null)
 
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
 
         if (usuarioLogin) {
             // Simulando la creación de un token 
-            const token =setUsuario `fake-token-${username}`;
+            const token = `fake-token-${username}`;
             localStorage.setItem('authToken', token);
             setUsuario(usuarioLogin)
             setIsLoggedIn(true);
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ usuario, login, logout, isLoggedIn, isAdmin }}>
+        <AuthContext.Provider value={{ usuario, login, logout, isLoggedIn, isAdmin  }}>
             {children}
         </AuthContext.Provider> );
 }

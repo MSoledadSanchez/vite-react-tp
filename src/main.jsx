@@ -7,12 +7,14 @@ import { CarritoProvider } from './context/CarritoContext.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { ProductProvider } from './context/ProductContext.jsx';
 
+
 const root = createRoot(document.getElementById('root'));
+
 
 root.render(
   <StrictMode>
     <Router>
-      <AuthProvider>
+      <AuthProvider >
         <ProductProvider>
           <CarritoProvider>
             <App />

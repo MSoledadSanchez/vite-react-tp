@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -18,16 +18,18 @@ import Carrito from './components/Carrito/Carrito.jsx';
 import Login from './pages/Login.jsx';
 import RutaProtegida from './components/RutaProtegida.jsx';
 import RutaAdmin from './components/RutaAdmin.jsx';
-
+import LoginModal from './components/Login/LoginModal.jsx';
 // import ListaProductos from  './components/ListaProductos/ListaProductos.jsx';
 
 function App() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
       <>
       <Header />
 
-        <NavBar />
+        <NavBar onOpenLoginModal={() => setIsModalOpen(true)} />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/nosotros" element={<Nosotros />} />
@@ -43,8 +45,10 @@ function App() {
                                           </RutaProtegida>} />
         </Routes>
 
-      {/* <ListaProductos /> */}
-
+        <LoginModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)} // Pasa la función para cerrar el modal
+        />      
       <Footer />
       </>
     )
