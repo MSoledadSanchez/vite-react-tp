@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Inicio from './pages/Inicio.jsx';
@@ -19,24 +17,28 @@ import Login from './pages/Login.jsx';
 import RutaProtegida from './components/RutaProtegida.jsx';
 import RutaAdmin from './components/RutaAdmin.jsx';
 import LoginModal from './components/Login/LoginModal.jsx';
-// import ListaProductos from  './components/ListaProductos/ListaProductos.jsx';
+import { useAuthContext } from './context/AuthContext.jsx';
+
 
 function App() {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const { showLoginModal, closeLoginModal } = useAuthContext();
 
     return (
       <>
       <Header />
 
-        <NavBar onOpenLoginModal={() => setIsModalOpen(true)} />
+        {/* <NavBar onOpenLoginModal={() => setIsModalOpen(true)} /> */}
+        <NavBar  onOpenLoginModal={closeLoginModal} />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/productos/:id" element={<ProductoDetalle />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/administrador" element={<RutaAdmin>
                                                   <Admin />
                                                 </RutaAdmin>}/>
@@ -46,8 +48,8 @@ function App() {
         </Routes>
 
         <LoginModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)} // Pasa la función para cerrar el modal
+              isOpen={showLoginModal}
+              onClose={closeLoginModal} // Pasa la función para cerrar el modal
         />      
       <Footer />
       </>

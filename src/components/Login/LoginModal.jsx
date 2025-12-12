@@ -36,9 +36,9 @@ function LoginModal({ isOpen, onClose}) {
                     &times; {/* Esto es una X grande */}
                 </button>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={styles.loginForm} >
                     <h2>Iniciar sesión</h2>
-                    <div>
+                    <div className={styles.formGroup}>
                         <label>Usuario:</label>
                         <input
                             type="text"
@@ -46,7 +46,7 @@ function LoginModal({ isOpen, onClose}) {
                             onChange={(e) => setUsuario(e.target.value)}
                         />
                     </div>
-                    <div>
+                    <div className={styles.formGroup}>
                         <label>Contraseña:</label>
                         <input
                             type="password"

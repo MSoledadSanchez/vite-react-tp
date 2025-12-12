@@ -30,6 +30,7 @@ export const AuthProvider = ({ children  }) => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false); 
+    const [showLoginModal, setShowLoginModal] = useState(false);
 
 
     const login = (username, password) => {
@@ -44,6 +45,7 @@ export const AuthProvider = ({ children  }) => {
             localStorage.setItem('authToken', token);
             setUsuario(usuarioLogin)
             setIsLoggedIn(true);
+            setShowLoginModal(false);
 
             if (usuarioLogin.rol == 'admin') {
               setIsAdmin(true)
@@ -61,8 +63,13 @@ export const AuthProvider = ({ children  }) => {
         setIsAdmin(false)
     };
 
+    const openLoginModal = () => setShowLoginModal(true);
+    const closeLoginModal = () => setShowLoginModal(false);
+
     return (
-        <AuthContext.Provider value={{ usuario, login, logout, isLoggedIn, isAdmin  }}>
+        <AuthContext.Provider value={{ usuario, login, logout, 
+                                       isLoggedIn, isAdmin, 
+                                       showLoginModal, openLoginModal, closeLoginModal  }}>
             {children}
         </AuthContext.Provider> );
 }

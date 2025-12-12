@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
 import styles from './NavBar.module.css';
 // import miImagen from '../../imagen/carrito.png'; // 1. Importa la imagen
 import HamburgerIcon from "../../assets/HamburgerIcon";
@@ -7,11 +6,9 @@ import CarritoIcon from "../Carrito/CarritoIcono";
 import Carrito from "../Carrito/Carrito";
 import { useAuthContext } from "../../context/AuthContext";
 
-import LoginModal from '../../components/Login/LoginModal'
+const NavBar = () => {
 
-const NavBar = ({onOpenLoginModal}) => {
-
-    const {isLoggedIn, isAdmin, usuario, login, logout} = useAuthContext(); // Estado para saber si el usuario ha iniciado sesión
+    const {isLoggedIn, isAdmin, usuario, logout, openLoginModal } = useAuthContext(); 
 
     return (
         <nav className={styles.navbar}>
@@ -46,7 +43,7 @@ const NavBar = ({onOpenLoginModal}) => {
                         </button>
                         </>
                 ) : (
-                        <button onClick={onOpenLoginModal}>
+                        <button onClick={openLoginModal}>
                             Ingresar
                         </button>
                 )}
