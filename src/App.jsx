@@ -37,8 +37,8 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/productos/:id" element={<ProductoDetalle />} />
-          <Route path="/contacto" element={<Contacto />} />
-          {/* <Route path="/login" element={<Login />} /> */}
+           {/*<Route path="/contacto" element={<Contacto />} />
+          <Route path="/login" element={<Login />} /> */}
           <Route path="/administrador" element={<RutaAdmin>
                                                   <Admin />
                                                 </RutaAdmin>}/>

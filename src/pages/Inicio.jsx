@@ -8,7 +8,7 @@ const Inicio = () => {
 
         <>
         <h1>Inicio</h1>
-        <p>Esta en la aplicación del carrito para presentar en la primer entrega</p>
+        <p>Esta en la aplicación del carrito para presentar como trabajo final</p>
 
         <ListaProductos />
            

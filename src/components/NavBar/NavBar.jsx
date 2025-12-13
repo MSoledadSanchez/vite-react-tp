@@ -5,6 +5,8 @@ import HamburgerIcon from "../../assets/HamburgerIcon";
 import CarritoIcon from "../Carrito/CarritoIcono";
 import Carrito from "../Carrito/Carrito";
 import { useAuthContext } from "../../context/AuthContext";
+import { FaUser, FaSignOutAlt	} from 'react-icons/fa';
+
 
 const NavBar = () => {
 
@@ -24,7 +26,7 @@ const NavBar = () => {
                 <li><Link to="/" >Inicio</Link></li>
                 <li><Link to="/nosotros">Nosotros</Link></li>
                 <li><Link to="/productos">Productos</Link></li>
-                <li><Link to="/contacto">Contacto</Link></li>
+                {/* <li><Link to="/contacto">Contacto</Link></li> */}
                 {isAdmin && (
                     <li><Link to="/administrador">Administrador</Link></li>
                 )}             
@@ -39,12 +41,14 @@ const NavBar = () => {
                             Hola, {usuario.nombre}! 
                         </span>
                         <button onClick={() => logout()} className={styles.logoutButton}> 
-                            Cerrar Sesión
+                            <span className={styles.txtBtnIngresar}>Cerrar Sesión</span>
+                            <span className={styles.iconBtnIngresar}><FaSignOutAlt /></span> 
                         </button>
                         </>
                 ) : (
-                        <button onClick={openLoginModal}>
-                            Ingresar
+                        <button onClick={openLoginModal} className={styles.loginButton}>
+                            <span className={styles.txtBtnIngresar}>Ingresar</span>
+                            <span className={styles.iconBtnIngresar}><FaUser /></span> 
                         </button>
                 )}
           

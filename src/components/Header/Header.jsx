@@ -8,16 +8,7 @@ const Header = () => {
     return(
          <header>  
             <h1>Bienvenidos a mi App React</h1>  
-
-            {/* Tengo que armar el carrito 
-
-            <div className={styles.iconoDeCarrito}>
-                <Link to="/carrito">
-                    <BagIcon className={styles.icono} />
-                </Link>
-            </div>
-            */}
-
+           
         </header>  
     )
 }

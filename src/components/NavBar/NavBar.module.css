@@ -64,3 +64,34 @@
   font-weight: bold;
 }
 
+
+.txtBtnIngresar {
+  display: inline;
+}
+
+.iconBtnIngresar {
+  display: none;      /* oculto el icono en PC*/
+}
+
+
+
+@media (max-width: 768px) { /* Define el ancho máximo para el móvil */
+    
+  .loginButton {
+        /* Ajustes para el botón en móvil (hazlo cuadrado) */
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        justify-content: center; 
+    }
+
+
+
+  .txtBtnIngresar {
+        display: none; /* Oculta el texto "Ingresar" */
+    }
+
+  .iconBtnIngresar {
+        display: inline-block; /* Muestra el icono */
+    }
+}
