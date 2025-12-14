@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
+  background-color:#040D50;
+  color: #F49F1C;
   padding: 1rem;
 }
 
@@ -22,6 +22,7 @@
 
 .navbarlinks li {
   margin-left: 1rem;
+  display: block;
 }
 
 .navbarlinks a {
@@ -29,6 +30,23 @@
   text-decoration: none;
 }
 
+/* Ocultar la hamburguesa por defecto en escritorio */
+.hamburger {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    /*flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    padding: 0;*/
+}
+
+.bar {
+    display: inline-block; 
+    color: white;
+}
 
 .zonaAuth {
     display: flex; 
@@ -43,7 +61,7 @@
   border-radius: 4px;
   cursor: pointer;
   margin-left: 20px; /* Separa el botón de los enlaces si la pantalla es estrecha */
-  background-color: #28a745; /* Verde para ingresar */
+  background-color: #F49F1C; /* Verde para ingresar */
   color: white;
 }
 
@@ -54,14 +72,15 @@
   cursor: pointer;
   margin-left: 20px; /* Separa el botón de los enlaces si la pantalla es estrecha */
   margin-right: 20px; /* separa el boton del icono */
-  background-color: #dc3545; /* Rojo para cerrar */
+  background-color:#6f74b9; 
   color: white;
 }
 
 .saludo {
   margin-right: 15px; /* Espacio entre el saludo y el botón */
-  color: #4CAF50; /* Color verde para el saludo, por ejemplo */
+  color:#F49F1C; 
   font-weight: bold;
+  align-content: center;
 }
 
 
@@ -75,17 +94,44 @@
 
 
 
-@media (max-width: 768px) { /* Define el ancho máximo para el móvil */
-    
+@media (max-width: 768px) { /* móvil */
+   
+  /* Para ajustar el menu */
+  .hamburger {
+      display: flex; /* Mostrar el botón de hamburguesa */
+  }
+
+  .navbarlinks {
+      display: none; /* Oculto por defecto en móvil */
+      position: absolute;
+      left: 30px;
+      top: 150px; /* Ajusta esto a la altura de tu navbar */
+      flex-direction: column;
+      width: 25%;
+      background-color:#6f74b9; ; /* Fondo del menú desplegable */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: start;
+  }
+
+  .navbarlinks li a {
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .navbarlinks.active {
+      display: flex; /* Mostrar cuando la clase 'active' está presente */
+  }
+
+  /* Para ajustar la zona Auth boton-saludo-carrito*/
   .loginButton {
-        /* Ajustes para el botón en móvil (hazlo cuadrado) */
+        /* botón cuadrado en móvil  */
         width: 40px;
         height: 40px;
         padding: 0;
         justify-content: center; 
     }
-
-
 
   .txtBtnIngresar {
         display: none; /* Oculta el texto "Ingresar" */

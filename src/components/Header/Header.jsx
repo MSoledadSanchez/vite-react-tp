@@ -1,14 +1,15 @@
-// import styles from  './Header.module.css'
-import { Link } from 'react-router-dom';
-import BagIcon from '../../assets/BagIcon';
+import styles from  './Header.module.css'
+import elevarte from '../../assets/logook.svg'; 
+import elevarteColor from '../../assets/logoColor.svg'
 
 
 const Header = () => {
 
     return(
          <header>  
-            <h1>Bienvenidos a mi App React</h1>  
-           
+            {/* <h1>Bienvenidos a mi App React</h1>   */}
+           <img src={elevarteColor} alt="Logo de mi aplicación" className={styles.logo} />
+
         </header>  
     )
 }

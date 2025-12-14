@@ -2,22 +2,23 @@
 .listaproductos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .card {
-  background-color: #d0d4c5; /* Color de fondo */
+  background-color: #DFE0F3; /* ; /* Color de fondo */
+  background-color: ; /* Color de fondo#9EA2DC */
   border-radius: 20px;      /* Bordes redondeados */
-  box-shadow: 2px 3px 15px #ECF0F1; /* Sombra */
+  box-shadow: 2px 3px 10px#9EA2DC; /* Sombra */
   max-width: 350px;         /* Ancho máximo */
   padding: 20px;            /* Espacio interno */
-  margin: 20px;             /* Espacio externo */
+  margin: 10px;             /* Espacio externo */
   overflow: hidden;         /* Ocultar contenido que se salga */
   display: flex;
   flex-direction: column;  /* Organizar el contenido en columna */
   align-items: center;     /* Centrar el contenido horizontalmente */
-  gap: 10px;
+  gap: 10px; 
 }
 
 
@@ -28,8 +29,6 @@
         object-fit: cover; /* Recorta la imagen para que cubra el área sin deformarse */
 }
 
-
-
 /* Estilo base para todos los botones de acción */
 .actionButton {
   padding: 8px 12px;
@@ -38,7 +37,7 @@
   cursor: pointer;
   font-size: 0.85rem;
   transition: background-color 0.2s;
-  background-color: #00ff26db; /* Verde */
+  background-color:#040D50; 
   color: white;
 }
 

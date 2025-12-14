@@ -1,7 +1,10 @@
 header { 
     
-    background-color: aquamarine;
     padding: "10px";
     text-align: center;
     color: "white" 
+}
+
+.logo {
+    margin-bottom: 20px;
 }

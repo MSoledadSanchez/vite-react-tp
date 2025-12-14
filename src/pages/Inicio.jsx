@@ -7,8 +7,8 @@ const Inicio = () => {
     return(
 
         <>
-        <h1>Inicio</h1>
-        <p>Esta en la aplicación del carrito para presentar como trabajo final</p>
+        <h2 className={StyleSheet.acento}>Encontrá todo lo que el artista esta buscando </h2>
+        {/* <p>Esta en la aplicación del carrito para presentar como trabajo final</p> */}
 
         <ListaProductos />
            

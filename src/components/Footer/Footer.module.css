@@ -1,3 +1,13 @@
+
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#040D50;
+    color: #F49F1C;
+    padding: 1rem;
+}
+
 .texto {
-    color: blueviolet;
+    color: #F49F1C;
 }

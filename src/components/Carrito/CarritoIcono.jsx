@@ -2,6 +2,7 @@ import React from 'react';
 import { useCart } from '../../context/CarritoContext';
 import  BagIcon  from '../../assets/BagIcon.jsx'; 
 import styles from './Carrito.module.css';
+import {FaShoppingCart} from 'react-icons/fa'
 
 const CarritoIcon = () => {
     
@@ -10,7 +11,8 @@ const CarritoIcon = () => {
 
     return (
         <div className={styles.iContenedor}>
-            <BagIcon />
+            <BagIcon /> 
+            {/*<FaShoppingCart size={24} color="blue"/>*/}
                 {Items > 0 && (
                     <span className={styles.iContador}>
                         {Items}

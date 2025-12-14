@@ -37,7 +37,7 @@ function LoginModal({ isOpen, onClose}) {
                 </button>
 
                 <form onSubmit={handleSubmit} className={styles.loginForm} >
-                    <h2>Iniciar sesión</h2>
+                    <h3>Iniciar sesión</h3>
                     <div className={styles.formGroup}>
                         <label>Usuario:</label>
                         <input
