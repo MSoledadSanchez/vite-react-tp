@@ -11,3 +11,12 @@
 .texto {
     color: #F49F1C;
 }
+
+
+@media (max-width: 768px) { /* móvil */
+
+    .direccion {
+        display: none;
+    }
+
+}
