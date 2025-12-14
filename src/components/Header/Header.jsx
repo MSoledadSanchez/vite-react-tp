@@ -1,5 +1,4 @@
 import styles from  './Header.module.css'
-import elevarte from '../../assets/logook.svg'; 
 import elevarteColor from '../../assets/logoColor.svg'
 
 
